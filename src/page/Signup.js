@@ -29,7 +29,6 @@ const Signup = () => {
  
    
     }
- 
   return (
     <main >        
         <section>

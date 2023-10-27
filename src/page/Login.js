@@ -3,6 +3,8 @@ import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../firebase';
 import { NavLink, useNavigate } from 'react-router-dom'
 import { doc, setDoc, getDocs, collection, getFirestore } from "firebase/firestore";
+import '../AuthStyles.css';
+import ImageFetcher from '../components/imageFetcher';
 
  
 const Login = () => {
@@ -53,63 +55,64 @@ const Login = () => {
        
     }
  
-    return(
-        <>
-            <main >        
-                <section>
-                    <div>                                            
-                        <p> Nic's To Do </p>                       
-                                                       
-                        <form>                                              
-                            <div>
-                                <label htmlFor="email-address">
-                                    Email address
-                                </label>
-                                <input
-                                    id="email-address"
-                                    name="email"
-                                    type="email"                                    
-                                    required                                                                                
-                                    placeholder="Email address"
-                                    onChange={(e)=>setEmail(e.target.value)}
-                                />
-                            </div>
+    return (
+        <div className="auth-container">
+            <div className="auth-card">
+                <div className="auth-header">
+                
+                    <ImageFetcher />
+                    <h1>Nic's To Do</h1>
+                </div>
+                <div className="auth-body">
+                    <form onSubmit={onLogin}>
+                        <div>
+                            <label htmlFor="email-address">
+                                Email address
+                            </label>
+                            <input
+                                className="auth-input"
+                                id="email-address"
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="Email address"
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
 
-                            <div>
-                                <label htmlFor="password">
-                                    Password
-                                </label>
-                                <input
-                                    id="password"
-                                    name="password"
-                                    type="password"                                    
-                                    required                                                                                
-                                    placeholder="Password"
-                                    onChange={(e)=>setPassword(e.target.value)}
-                                />
-                            </div>
-                                                
-                            <div>
-                                <button                                    
-                                    onClick={onLogin}                                        
-                                >      
-                                    Let's try today                                                                  
-                                </button>
-                            </div>                               
-                        </form>
-                       
-                        <p className="text-sm text-white text-center">
-                            No account yet? {' '}
-                            <NavLink to="/signup">
-                                Sign up
-                            </NavLink>
-                        </p>
-                                                   
-                    </div>
-                </section>
-            </main>
-        </>
-    )
-}
- 
-export default Login
+                        <div>
+                            <label htmlFor="password">
+                                Password
+                            </label>
+                            <input
+                                className="auth-input"
+                                id="password"
+                                name="password"
+                                type="password"
+                                required
+                                placeholder="Password"
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+
+                        <div>
+                            <button className="auth-button" type="submit">
+                                Let's try today
+                            </button>
+                        </div>
+                    </form>
+
+                    <p className="text-sm text-center" style={{ color: 'white' }}>
+                        No account yet? {' '}
+                        <NavLink to="/signup" style={{ color: 'white' }}>
+                            Sign up
+                        </NavLink>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Login;

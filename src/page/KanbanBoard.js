@@ -90,7 +90,7 @@ const handleLogout = () => {
 return (
   <DragDropContext onDragEnd={handleDragEnd} key={renderKey}>
       <div style={{ position: 'relative', display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h1 className="title">Nicole's To-Do List App</h1>
+          <h1 className="title">To-Do List App</h1>
           <h2 className="subTitle">Consider it a blessing you get to use this</h2>
           <button onClick={handleLogout} className='logout-button'>Give Up </button>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", width: "100%" }}>

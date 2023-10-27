@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ImageFetcher() {
+function ImageFetcher(props) {
   const [imageUrl, setImageUrl] = useState(null);
 
   const fetchCatImage = () => {

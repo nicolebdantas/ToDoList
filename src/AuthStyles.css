@@ -1,0 +1,68 @@
+/* AuthStyles.css */
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.auth-card {
+    width: 80%; /* Adjust the width as per your preference */
+    max-width: 600px; /* Set a maximum width to maintain readability */
+    margin: 0 auto; /* Center the card horizontally */
+    background: linear-gradient(
+        90deg,
+        rgba(48, 16, 255, 1) 0%,
+        rgba(100, 115, 255, 1) 100%
+    );
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white; /* Text color set to white for better visibility against the gradient backgrounds */
+}
+
+.auth-header {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 12, 241, 1) 0%,
+        rgba(250, 0, 135, 1) 100%
+    );
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+.auth-body {
+    padding: 50px; /* Increase padding for a roomier layout */
+}
+
+.auth-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-button {
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 1) 0%,
+        rgba(17, 122, 255, 1) 100%
+    );
+    color: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-button:hover {
+    opacity: 0.9; /* Slight opacity change on hover */
+}

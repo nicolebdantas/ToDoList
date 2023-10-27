@@ -25,6 +25,7 @@ const Signup = () => {
                 console.log(errorCode, errorMessage);
             });
     }
+<<<<<<< HEAD
 
     return (
         <div className="auth-container">
@@ -37,6 +38,15 @@ const Signup = () => {
                 <div className="auth-body">
 
                     <form onSubmit={onSubmit}>                                                                                            
+=======
+  return (
+    <main >        
+        <section>
+            <div>
+                <div>                  
+                    <h1> Nic's To Do </h1>                                                                            
+                    <form>                                                                                            
+>>>>>>> 022e883fcaede882434b7d614da1e0d3ecc5baac
                         <div>
                             <label htmlFor="email-address">
                                 Email address

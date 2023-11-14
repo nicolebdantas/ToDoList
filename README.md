@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# ToDoList Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo Link: 
+https://www.loom.com/share/b4ed7ebf13304ec5a57a1135b71aea4b?sid=19952a16-478c-4c59-8876-068cfe3bbc1f
 
-## Available Scripts
+## Live Link:
+https://nicole-to-do-list.vercel.app/Signup
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+ToDoList is a React-based application designed to help users manage their tasks effectively. It allows users to add, delete, and mark tasks as complete, and it also supports the management of subtasks, providing a hierarchical structure for task management. The application is integrated with Firebase for backend, allowing real-time data synchronization and authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Task Management**: Add, delete, and mark tasks as complete.
+- **Subtasks**: Manage subtasks for each main task.
+- **User Authentication**: Sign up and log in functionality.
+- **Real-Time Data**: Firebase real-time database integration.
+- **Drag and Drop**: Reorder tasks based on priority.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+- **[`src/App.js`](https://github.com/nicolebdantas/ToDoList/blob/main/src/App.js)**: Main component that wraps the entire application. It includes routing to different pages such as Home, Signup, and Login.
+  
+- **Components**
+  - **Todo.js**: This file contains the Todo component, responsible for rendering individual todo items.
+  - **TodoForm.js**: This file contains the TodoForm component, which handles the creation and updating of tasks.
+  - **TodoList.js**: This file contains the TodoList component, responsible for rendering the list of tasks.
+  - **SubTaskList.js**: This file contains the SubTask component, which handles the rendering of subtasks.
+  - **SubTaskForm.js**: This file contains the SubTaskForm component, which handles the creation of subtasks.
+  - **catLoader.js**: This file contains the API for cat images utilized in the TodoList.
+  - **imageFetcher.js**: This file contains a cat animation for loading.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Pages**
+  - **Home**: Main page where tasks are displayed and managed.
+  - **KanbanBoard**: Main content of the homepage with all the columns.
+  - **Signup**: Page for user registration.
+  - **Login**: Page for user login.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **[`src/firebase.js`](https://github.com/nicolebdantas/ToDoList/blob/main/src/firebase.js)**: Configuration and initialization of Firebase. It includes the setup for authentication and the Firestore database.
 
-### `npm run eject`
+### Authentication
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Signup and Login**: Functionalities are integrated using Firebase authentication services.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- CSS is used for styling the components, ensuring a user-friendly interface.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running the Application
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Navigate to the project directory and install dependencies using `npm install`.
+2. Automatically force package updates (this is necessary because of the use of a few outdated libraries) using `npm audit fix --force`.
+3. Run the application using `npm start`.
